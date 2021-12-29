@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ol li,
+ul li {
+  list-style: none;
+}
+a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  outline: none;
+  border: 0;
+}
+img {
+  outline: 0;
+  border: 0;
+}
+button {
+  outline: 0;
+  border: 0;
+}
