@@ -23,7 +23,31 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="vegas/vegas.min.js"></script>
     <script>
-      $(document).ready(function (e) {});
+      $(document).ready(function (e) {
+        // Vegas Plugin
+        $("body").vegas({
+          slides: [
+            {
+              src: "imgs/bg.jpg", // 동영상을 재생할 수 없는 브라우저를 위해 대체 이미지를 지정
+              video: {
+                // video { } 내부에 배경 동영상과 옵션을 지정
+                src: ["media/nike.mp4"], // src 속성으로 사용할 동영상을 지정
+                // src:['media/nike.mp4', 'media/nike.webm', 'media/nike.ogv'],
+                loop: true, // loop 속성으로 동영상의 반복 여부를 지정, true일 때 반복
+                mute: true, // mute 속성으로 동영상의 무음 여부를 지정, true일 때 무음
+                preload: true, // 이미지와 동영상을 미리 가져온다.
+              },
+            } /*,
+              {src:'imgs/stream.jpg', 배경 슬라이드를 구현할 경우 쉽표를 붙이고 동일하게 작성
+                 video:{
+                    src:['video/stream.mp4','video/stream.webm'],
+                    loop:true,
+                    mute:true
+                 }
+              }*/,
+          ],
+        });
+      });
     </script>
   </head>
   <body>
@@ -126,13 +150,12 @@
           <a href="#"><img src="imgs/pic3.png" alt="" /></a>
         </article>
       </div>
-    </div>
 
-    <div class="conAni">
-      <i class="fas fa-angle-double-left"></i>
-      <i class="fas fa-angle-double-left"></i>
-      <i class="fas fa-angle-double-left"></i>
-      <i class="bi bi-chevron-double-left"></i>
+      <div class="conAni">
+        <i class="fas fa-angle-double-left"></i>
+        <i class="fas fa-angle-double-left"></i>
+        <i class="fas fa-angle-double-left"></i>
+      </div>
     </div>
   </body>
 </html>
